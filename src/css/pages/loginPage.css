@@ -1,0 +1,10 @@
+.toolbar {
+    margin-top: 80px;
+}  
+
+.inputBase {
+    border-bottom: 1px solid #0072e4;
+    border-radius: 4px;
+    height: 6vh;
+    padding: 20px;
+}

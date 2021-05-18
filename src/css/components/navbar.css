@@ -1,0 +1,184 @@
+nav {
+    background: #f1f1f1;
+    border-bottom: 1px solid black;
+  }
+  
+  nav:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  nav .logo {
+    float: left;
+    color: #0072e4;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 70px;
+    padding-left: 40px;
+  }
+  
+  nav ul {
+    float: right;
+    list-style: none;
+    position: relative;
+    margin-right: 40px;
+  }
+  
+  nav ul li {
+    float: left;
+    display: inline-block;
+    background: #f1f1f1;
+    margin: 0 5px;
+  }
+  
+  nav ul li a {
+    color: #0072e4;
+    text-decoration: none;
+    line-height: 70px;
+    font-size: 17px;
+    padding: 5px 12px;
+  }
+  
+  nav ul li a:hover {
+    box-shadow: 0 0 5px cornflowerblue, 0 0 5px rgb(62, 122, 233);
+    border-radius: 5px;
+    color: rgb(62, 122, 233);
+  }
+  
+  nav ul ul li a:hover {
+    color: rgb(62, 122, 233);
+    box-shadow: none;
+  }
+  
+  nav ul ul {
+    position: absolute;
+    top: 70px;
+    opacity: 0;
+    border-top: 3px solid rgb(62, 122, 233);
+    visibility: hidden;
+    transition: top 0.3s;
+  }
+  
+  nav ul ul ul {
+    border-top: none;
+  }
+  
+  nav ul li:hover > ul {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  nav ul ul li {
+    position: relative;
+    margin: 0px;
+    width: 150px;
+    float: none;
+    display: list-item;
+    border-bottom: 1px solid rgb(62, 69, 110);
+  }
+  
+  nav ul ul li a {
+    line-height: 50px;
+  }
+  
+  nav ul ul ul li {
+    position: relative;
+    top: -70px;
+    left: 150px;
+  }
+  
+  .show,
+  input {
+    display: none;
+  }
+  .show,
+  .icon,
+  input {
+    display: none;
+  }
+  
+  @media only screen and (max-width: 1417px) {
+    nav ul {
+      margin-right: 0px;
+      float: left;
+    }
+    nav .logo {
+      padding-left: 30px;
+      width: 100%;
+    }
+    nav ul li {
+      display: block;
+      width: 100%;
+      border-bottom: 1px solid black;
+    }
+    nav ul ul li {
+      display: block;
+      width: 100%;
+    }
+    nav ul ul {
+      top: 70px;
+      position: static;
+      border-top: none;
+      float: none;
+      display: none;
+      opacity: 1;
+      visibility: visible;
+    }
+    .show {
+      display: block;
+      color: #0072e4;
+      font-size: 18px;
+      padding: 0 20px;
+      line-height: 70px;
+      cursor: pointer;
+    }
+    .show:hover {
+      color: rgb(62, 122, 233);
+    }
+    nav ul ul ul li {
+      position: static;
+    }
+    nav ul ul li {
+      border-bottom: 0px;
+    }
+    nav ul ul a {
+      padding-left: 40px;
+    }
+    nav ul ul ul a {
+      padding-left: 80px;
+    }
+    .icon {
+      display: block;
+      color: #0072e4;
+      position: absolute;
+      right: 40px;
+      line-height: 70px;
+      font-size: 25px;
+      cursor: pointer;
+    }
+    nav ul li a:hover {
+      box-shadow: none;
+    }
+    .show + a,
+    ul{
+      display: none;
+    }
+    .MuiMenu-paper{
+      opacity: 1;
+      visibility: visible;
+    }
+    .MuiMenu-list{
+      opacity: 1;
+      visibility: visible;
+      display: block;
+    }
+    .MuiInput-root{
+      opacity: 1;
+      visibility: visible;
+      display: block;
+    }
+    [id^="btn"]:checked + ul{
+      display: block;
+    }
+  }
